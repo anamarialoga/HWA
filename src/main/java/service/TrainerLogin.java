@@ -18,7 +18,7 @@ public class TrainerLogin {
     public static void loadTrainer() {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            InputStream inputStream = new FileInputStream(new File("../HWApp2/src/main/resources/datastorage/trainers.json"));
+            InputStream inputStream = new FileInputStream(new File("../HWA/src/main/resources/datastorage/trainers.json"));
             TypeReference<List<Trainer>> typeReference = new TypeReference<List<Trainer>>() {
             };
             trainers = mapper.readValue(inputStream, typeReference);

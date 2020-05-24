@@ -20,7 +20,7 @@ public class CustomerReg {
     public static void loadCustomers() {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            InputStream inputStream = new FileInputStream(new File("../HWApp2/src/main/resources/datastorage/customers.json"));
+            InputStream inputStream = new FileInputStream(new File("../HWA/src/main/resources/datastorage/customers.json"));
             TypeReference<List<Customer>> typeReference = new TypeReference<List<Customer>>() {
             };
             customers = mapper.readValue(inputStream, typeReference);
@@ -43,7 +43,7 @@ public class CustomerReg {
         customers.add(ct);
         try {
             ObjectMapper mapper = new ObjectMapper();
-            File file=new File("../HWApp2/src/main/resources/datastorage/customers.json");
+            File file=new File("../HWA/src/main/resources/datastorage/customers.json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, customers);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

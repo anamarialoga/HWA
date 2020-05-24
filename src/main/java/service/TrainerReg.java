@@ -21,7 +21,7 @@ public class TrainerReg {
     public static void loadTrainer() {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            InputStream inputStream = new FileInputStream(new File("../HWApp2/src/main/resources/datastorage/trainers.json"));
+            InputStream inputStream = new FileInputStream(new File("../HWA/src/main/resources/datastorage/trainers.json"));
             TypeReference<List<Trainer>> typeReference = new TypeReference<List<Trainer>>() {
             };
             trainers = mapper.readValue(inputStream, typeReference);
@@ -48,7 +48,7 @@ public class TrainerReg {
 
         try {
             ObjectMapper mapper = new ObjectMapper();
-            File file=new File("../HWApp2/src/main/resources/datastorage/trainers.json");
+            File file=new File("../HWA/src/main/resources/datastorage/trainers.json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, trainers);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
