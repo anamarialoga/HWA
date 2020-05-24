@@ -42,22 +42,22 @@
           <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="139.0" prefWidth="316.0" text="Button">
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToSettings" prefHeight="139.0" prefWidth="316.0" text="Settings">
                <graphic>
                   <ImageView fitHeight="85.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="139.0" prefWidth="316.0" text="Button" GridPane.rowIndex="1">
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToWorkout" prefHeight="139.0" prefWidth="316.0" text="ChooseWorkout" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="85.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="139.0" prefWidth="316.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToCalendar" prefHeight="139.0" prefWidth="316.0" text="LogWorkoutDays" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="85.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="139.0" prefWidth="316.0" text="Button" GridPane.columnIndex="1">
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToPremium" prefHeight="139.0" prefWidth="316.0" text="GetPremium" GridPane.columnIndex="1">
                <graphic>
                   <ImageView fitHeight="85.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
