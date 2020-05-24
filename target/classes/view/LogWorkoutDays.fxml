@@ -71,11 +71,6 @@
       <Text fx:id="text1111" layoutX="147.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="427.13671875" />
       <Text fx:id="text11111" layoutX="147.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="427.13671875" />
       <Text fx:id="text111111" layoutX="147.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="427.13671875" />
-      <ImageView fitHeight="38.0" fitWidth="45.0" layoutX="438.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@calend.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="493.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@ccc.png" />
