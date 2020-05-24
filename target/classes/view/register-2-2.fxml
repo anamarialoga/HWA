@@ -14,7 +14,7 @@
     <children>
         <Label alignment="CENTER" layoutX="110.0" layoutY="74.0" prefHeight="54.0" prefWidth="218.0" text="Register Trainer" textAlignment="CENTER" textFill="#8999a8">
             <font>
-                <Font name="Kristen ITC" size="24.0" />
+                <Font name="Britannic Bold" size="29.0" />
             </font>
         </Label>
         <TextField layoutX="-2.0" layoutY="22.0" style="-fx-background-color: #212121;" />

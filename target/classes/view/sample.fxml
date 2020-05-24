@@ -13,7 +13,7 @@
     <children>
         <Label alignment="CENTER" layoutX="72.0" layoutY="78.0" prefHeight="54.0" prefWidth="375.0" text="Start your workout! " textAlignment="CENTER" textFill="#7790a8">
             <font>
-                <Font name="Kristen ITC" size="30.0" />
+                <Font name="Britannic Bold" size="30.0" />
             </font>
         </Label>
         <TextField layoutX="121.0" layoutY="31.0" style="-fx-background-color: #212121;" />

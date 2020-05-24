@@ -12,7 +12,7 @@
     <children>
         <Label alignment="CENTER" layoutX="32.0" layoutY="70.0" prefHeight="54.0" prefWidth="452.0" text="Choose the type for your account" textAlignment="CENTER" textFill="#94a6b5">
             <font>
-                <Font name="Kristen ITC" size="24.0" />
+                <Font name="Britannic Bold" size="28.0" />
             </font>
         </Label>
         <TextField layoutX="-2.0" layoutY="22.0" style="-fx-background-color: #212121;" />
