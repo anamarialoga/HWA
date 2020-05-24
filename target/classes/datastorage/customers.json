@@ -4,4 +4,7 @@
 }, {
   "username" : "customer1",
   "password" : "1111"
+}, {
+  "username" : "custom1",
+  "password" : "111"
 } ]
