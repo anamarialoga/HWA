@@ -40,8 +40,8 @@ public class ControllerLogWorkoutDays {
     }
 
     public void goBackk(ActionEvent event) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/customerMenu.fxml"));
-        Scene newwindow=new Scene(root);
+        Parent roott= FXMLLoader.load(getClass().getClassLoader().getResource("view/customerMenu.fxml"));
+        Scene newwindow=new Scene(roott);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 
         window.setScene(newwindow);
