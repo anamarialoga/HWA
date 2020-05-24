@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import javax.xml.soap.Text;
+import javafx.scene.text.Text;
 import java.io.IOException;
 
 public class ControllerSettings {
@@ -22,5 +22,10 @@ public class ControllerSettings {
 
         window.setScene(newwindow);
         window.show();
+    }
+
+    @FXML
+    public void ShowMessage(ActionEvent event) throws IOException {
+        messageField.setText("Your personal data has been registered");
     }
 }
