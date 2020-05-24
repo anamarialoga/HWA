@@ -12,9 +12,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="508.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerReg2_1">
     <children>
-        <Label alignment="CENTER" layoutX="110.0" layoutY="74.0" prefHeight="54.0" prefWidth="265.0" text="Register customer" textAlignment="CENTER" textFill="#a49b9b">
+        <Label alignment="CENTER" layoutX="95.0" layoutY="72.0" prefHeight="54.0" prefWidth="265.0" text="Register customer" textAlignment="CENTER" textFill="#849cb2">
             <font>
-                <Font size="30.0" />
+                <Font name="Kristen ITC" size="24.0" />
             </font>
         </Label>
         <TextField layoutX="-2.0" layoutY="22.0" style="-fx-background-color: #212121;" />
@@ -22,10 +22,10 @@
             <font>
                 <Font size="13.0" />
             </font></TextField>
-        <AnchorPane layoutX="110.0" layoutY="124.0" prefHeight="4.0" prefWidth="247.0" style="-fx-background-color: #76ff03;" />
-        <AnchorPane layoutX="152.0" layoutY="208.0" prefHeight="4.0" prefWidth="239.0" style="-fx-background-color: #76ff03;" />
-        <AnchorPane layoutX="152.0" layoutY="269.0" prefHeight="4.0" prefWidth="239.0" style="-fx-background-color: #76ff03;" />
-        <Button layoutX="152.0" layoutY="303.0" mnemonicParsing="false" onAction="#registerButton" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #76ff03; -fx-background-radius: 90;" text="Create account" />
+        <AnchorPane layoutX="110.0" layoutY="124.0" prefHeight="4.0" prefWidth="247.0" style="-fx-background-color: #708090;" />
+        <AnchorPane layoutX="152.0" layoutY="208.0" prefHeight="4.0" prefWidth="239.0" style="-fx-background-color: #708090;" />
+        <AnchorPane layoutX="152.0" layoutY="269.0" prefHeight="4.0" prefWidth="239.0" style="-fx-background-color: #708090;" />
+        <Button layoutX="152.0" layoutY="303.0" mnemonicParsing="false" onAction="#registerButton" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #708090; -fx-background-radius: 90;" text="Create account" />
         <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="110.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../view/user.png" />
