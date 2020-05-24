@@ -17,7 +17,7 @@ public class CustomerLogin {
     public static void loadCustomers() {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            InputStream inputStream = new FileInputStream(new File("../HWApp2/src/main/resources/datastorage/customers.json"));
+            InputStream inputStream = new FileInputStream(new File("../HWA/src/main/resources/datastorage/customers.json"));
             TypeReference<List<Customer>> typeReference = new TypeReference<List<Customer>>() {
             };
             customers = mapper.readValue(inputStream, typeReference);
