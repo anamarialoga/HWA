@@ -1,9 +1,25 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class ControllerMenuTrainer {
-    public void goToSettings2(ActionEvent event) {
+
+    @FXML
+    public void goToSettings2(ActionEvent event) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/SettingsT.fxml"));
+        Scene newwindow=new Scene(root);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(newwindow);
+        window.show();
     }
 
     public void goEditWorkouts(ActionEvent event) {
@@ -15,6 +31,12 @@ public class ControllerMenuTrainer {
     public void goToCustomersList(ActionEvent event) {
     }
 
-    public void goBackToLogin(ActionEvent event) {
+    public void goBackToLogin(ActionEvent event) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/sample.fxml"));
+        Scene newwindow=new Scene(root);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(newwindow);
+        window.show();
     }
 }
