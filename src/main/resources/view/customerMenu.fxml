@@ -64,7 +64,7 @@
                             </image></ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToPremium" prefHeight="139.0" prefWidth="316.0" GridPane.columnIndex="1">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToPremiumm" prefHeight="139.0" prefWidth="316.0" GridPane.columnIndex="1">
                     <graphic>
                         <ImageView fitHeight="67.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
                             <image>

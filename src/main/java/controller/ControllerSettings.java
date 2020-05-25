@@ -17,10 +17,10 @@ public class ControllerSettings {
 
     public void goBackk(ActionEvent event) throws IOException {
         Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/customerMenu.fxml"));
-        Scene newwindow=new Scene(root);
+        Scene root2=new Scene(root);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 
-        window.setScene(newwindow);
+        window.setScene(root2);
         window.show();
     }
 

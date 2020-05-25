@@ -18,9 +18,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="814.0" style="-fx-background-color: #708090;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerPremiumSub">
     <children>
-        <Pane layoutX="-1.0" prefHeight="190.0" prefWidth="814.0" style="-fx-background-color: #708090;">
+        <Pane layoutX="-1.0" prefHeight="140.0" prefWidth="814.0" style="-fx-background-color: #708090;">
             <children>
-                <Label layoutX="113.0" layoutY="89.0" prefHeight="75.0" prefWidth="335.0" text="Manage Profile" textFill="#30424d">
+                <Label layoutX="149.0" layoutY="58.0" prefHeight="75.0" prefWidth="587.0" text="Subscribe to Premium" textFill="#30424d">
                     <font>
                         <Font name="Britannic Bold" size="48.0" />
                     </font>
@@ -31,32 +31,32 @@
                         <Image url="@undo.png" />
                     </image>
                 </ImageView>
-                <ImageView fitHeight="190.0" fitWidth="187.0" layoutX="546.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@blank-profile-picture-973460_640.png" />
-                    </image>
-                </ImageView>
-                <Pane layoutX="546.0" layoutY="244.0" prefHeight="42.0" prefWidth="187.0" style="-fx-background-color: #808080;">
-                    <children>
-                        <ImageView fitHeight="50.0" fitWidth="61.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@camera.png" />
-                            </image>
-                        </ImageView>
-                    </children>
-                </Pane>
+            <ImageView fitHeight="75.0" fitWidth="88.0" layoutX="624.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@premium.png" />
+               </image>
+            </ImageView>
             </children></Pane>
-        <TextField layoutX="122.0" layoutY="327.0" prefHeight="50.0" prefWidth="343.0" style="-fx-background-color: #709090;" />
-        <TextField layoutX="122.0" layoutY="245.0" promptText="|" style="-fx-background-color: #709090;" />
-        <TextField layoutX="122.0" layoutY="286.0" style="-fx-background-color: #709090;" />
-        <Button layoutX="192.0" layoutY="413.0" mnemonicParsing="false" onAction="#ShowMessage" prefHeight="68.0" prefWidth="196.0" style="-fx-background-color: #709090; -fx-background-radius: 90;" text="Submit" />
-        <Label layoutX="19.0" layoutY="207.0" prefHeight="31.0" prefWidth="86.0" text="Gender" />
-        <Label layoutX="19.0" layoutY="245.0" prefHeight="31.0" prefWidth="86.0" text="Age" />
-        <Label layoutX="19.0" layoutY="286.0" prefHeight="31.0" prefWidth="86.0" text="Weight" />
-        <Label layoutX="19.0" layoutY="327.0" prefHeight="31.0" prefWidth="86.0" text="Goals" />
-        <CheckBox layoutX="122.0" layoutY="212.0" mnemonicParsing="false" text="Male" />
-        <CheckBox layoutX="218.0" layoutY="212.0" mnemonicParsing="false" text="Female" />
-        <CheckBox layoutX="317.0" layoutY="212.0" mnemonicParsing="false" text="Other " />
-        <Text fx:id="messageField" layoutX="490.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="229.6708984375" />
+      <TextField layoutX="127.0" layoutY="224.0" prefHeight="31.0" prefWidth="257.0" promptText="xxxx-xxxx-xxxx-xxxx" style="-fx-background-color: #709090;" />
+      <Label layoutX="25.0" layoutY="224.0" prefHeight="31.0" prefWidth="102.0" text="Card Number:" />
+      <Label layoutX="25.0" layoutY="181.0" prefHeight="31.0" prefWidth="102.0" text="Name:">
+         <font>
+            <Font name="Marlett" size="15.0" />
+         </font></Label>
+      <TextField fx:id="nameField" layoutX="127.0" layoutY="181.0" prefHeight="31.0" prefWidth="257.0" style="-fx-background-color: #709090;" />
+      <Label layoutX="25.0" layoutY="267.0" prefHeight="31.0" prefWidth="102.0" text="CVV:" />
+      <TextField fx:id="cvvField" layoutX="127.0" layoutY="267.0" prefHeight="31.0" prefWidth="56.0" promptText="xxx" style="-fx-background-color: #709090;" />
+      <Label layoutX="25.0" layoutY="318.0" prefHeight="21.0" prefWidth="411.0" text="I agree to the Application Terms of Service and Privacy Policy" />
+      <CheckBox layoutX="436.0" layoutY="318.0" mnemonicParsing="false" />
+      <Button layoutX="120.0" layoutY="380.0" mnemonicParsing="false" onAction="#makePayment" prefHeight="66.0" prefWidth="183.0" style="-fx-background-color: #709090; -fx-background-radius: 90;" text="Buy with 9,99$/month" />
+      <Text fx:id="messageField" layoutX="214.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="444.6708984375" />
+      <Label layoutX="532.0" layoutY="176.0" prefHeight="42.0" prefWidth="251.0" text="Already a member?" textFill="#30424d">
+         <font>
+            <Font name="Britannic Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="532.0" layoutY="224.0" prefHeight="31.0" prefWidth="108.0" text="Enter your CVV:" />
+      <TextField fx:id="checkCVV" layoutX="646.0" layoutY="224.0" prefHeight="31.0" prefWidth="56.0" promptText="xxx" style="-fx-background-color: #709090;" />
+      <Button layoutX="532.0" layoutY="285.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="183.0" style="-fx-background-color: #709090; -fx-background-radius: 90;" text="Enter" />
     </children>
 </AnchorPane>
