@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -11,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="814.0" style="-fx-background-color: #708090;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSettings">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="814.0" style="-fx-background-color: #708090;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSettings">
     <children>
         <Pane layoutX="-1.0" prefHeight="190.0" prefWidth="814.0" style="-fx-background-color: #708090;">
             <children>
@@ -26,11 +31,20 @@
                   <Image url="@undo.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="180.0" fitWidth="210.0" layoutX="553.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="190.0" fitWidth="187.0" layoutX="546.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@blank-profile-picture-973460_640.png" />
                </image>
             </ImageView>
+            <Pane layoutX="546.0" layoutY="244.0" prefHeight="42.0" prefWidth="187.0" style="-fx-background-color: #808080;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="61.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@camera.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
             </children></Pane>
       <TextField layoutX="122.0" layoutY="327.0" prefHeight="50.0" prefWidth="343.0" style="-fx-background-color: #709090;" />
       <TextField layoutX="122.0" layoutY="245.0" promptText="|" style="-fx-background-color: #709090;" />
