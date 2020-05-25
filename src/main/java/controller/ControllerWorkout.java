@@ -28,7 +28,7 @@ public class ControllerWorkout {
     }
 
     public void goToFatBurning(ActionEvent event) throws IOException {
-       Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/FatBurning.fxml"));
+       Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/ExampleOfTableView.fxml"));
         Scene newwindow=new Scene(root);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 

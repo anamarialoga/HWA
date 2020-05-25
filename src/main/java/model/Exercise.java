@@ -10,20 +10,20 @@ public class Exercise {
     private SimpleStringProperty w;
     private SimpleStringProperty th;
     private SimpleStringProperty f;
-    private SimpleStringProperty  s;
+    private SimpleStringProperty s;
     private SimpleStringProperty su;
 
-  /*  public Exercise()
-    {
+    public Exercise()
+    {/*
         this.m=new SimpleStringProperty("");
         this.t=new SimpleStringProperty("");
         this.w=new SimpleStringProperty("");
         this.th=new SimpleStringProperty("");
         this.f=new SimpleStringProperty("");
         this.s=new SimpleStringProperty("");
-        this.su=new SimpleStringProperty("");
+        this.su=new SimpleStringProperty("");*/
     }
-*/
+
     public Exercise(String m, String t, String w, String th, String f, String s, String su)
     {
         this.m=new SimpleStringProperty(m);
@@ -36,59 +36,59 @@ public class Exercise {
 
     }
 
-    public String getM() {
+    public String getm() {
         return m.get();
     }
 
-    public void setM(String m) {
+    public void setm(String m) {
         this.m = new SimpleStringProperty(m);
     }
 
-    public String getT() {
+    public String gett() {
         return t.get();
     }
 
-    public void setT(String t) {
+    public void sett(String t) {
         this.t =new SimpleStringProperty(t);
     }
 
-    public String getW() {
+    public String getw() {
         return w.get();
     }
 
-    public void setW(String w) {
+    public void setw(String w) {
         this.w = new SimpleStringProperty(w);
     }
 
-    public String getTh() {
+    public String getth() {
         return th.get();
     }
 
-    public void setTh(String th) {
+    public void setth(String th) {
         this.th = new SimpleStringProperty(th);
     }
 
-    public String getF() {
+    public String getf() {
         return f.get();
     }
 
-    public void setF(String f) {
+    public void setf(String f) {
         this.f = new SimpleStringProperty(f);
     }
 
-    public String getS() {
+    public String gets() {
         return s.get();
     }
 
-    public void setS(String s) {
+    public void sets(String s) {
         this.s = new SimpleStringProperty(s);
     }
 
-    public String getSu() {
+    public String getsu() {
         return su.get();
     }
 
-    public void setSu(String su) {
+    public void setsu(String su) {
         this.su = new SimpleStringProperty(su);
     }
 
