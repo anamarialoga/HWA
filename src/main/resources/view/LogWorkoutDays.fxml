@@ -63,7 +63,7 @@
             <Font name="Arial" size="13.0" />
          </font>
       </Label>
-      <Button layoutX="476.0" layoutY="391.0" mnemonicParsing="false" onAction="#Reminder" prefHeight="38.0" prefWidth="98.0" text="Submit" />
+      <Button layoutX="476.0" layoutY="391.0" mnemonicParsing="false" onAction="#Reminder" prefHeight="38.0" prefWidth="98.0" text="Submit" style="-fx-effect: dropshadow( gaussian , rgba(10,10,10,10.9) , 10,0,7,10 )" />
       <Text fx:id="text" layoutX="147.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="427.13671875" />
       <Text fx:id="text1" layoutX="147.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="427.13671875" />
       <Text fx:id="text11" layoutX="147.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="427.13671875" />
@@ -76,7 +76,7 @@
             <Image url="@ccc.png" />
          </image>
       </ImageView>
-      <Button layoutX="28.0" layoutY="398.0" mnemonicParsing="false" onAction="#goBackk" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #709090; -fx-background-radius: 90;" text="     Back" textFill="#000000db" />
+      <Button layoutX="28.0" layoutY="398.0" mnemonicParsing="false" onAction="#goBackk" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #709090; -fx-background-radius: 90;-fx-effect: dropshadow( gaussian , rgba(10,10,10,10.9) , 10,0,7,10 )" text="     Back" textFill="#000000db" />
       <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="42.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@undo.png" />

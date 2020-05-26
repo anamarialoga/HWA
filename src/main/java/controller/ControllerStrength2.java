@@ -22,7 +22,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ControllerStrength implements Initializable {
+public class ControllerStrength2 implements Initializable {
 
     @FXML
     private TableView<Exercise> tableView;
@@ -46,7 +46,7 @@ public class ControllerStrength implements Initializable {
 
 
     public void goBackk(ActionEvent event) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/Workout.fxml"));
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/WorkoutT.fxml"));
         Scene newwindow=new Scene(root);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 

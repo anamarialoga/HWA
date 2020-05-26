@@ -20,7 +20,7 @@
                         <Font name="Britannic Bold" size="48.0" />
                     </font>
                 </Label>
-                <Button layoutX="739.0" layoutY="22.0" mnemonicParsing="false" onAction="#goBackToLogin" prefHeight="35.0" prefWidth="44.0" style="-fx-background-color: #708090;">
+                <Button layoutX="739.0" layoutY="22.0" mnemonicParsing="false" onAction="#goBackToLogin" prefHeight="35.0" prefWidth="44.0" style="-fx-background-color: #708090;-fx-effect: dropshadow( gaussian , rgba(10,10,10,10.9) , 10,0,7,10 )">
                     <graphic>
                         <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -40,7 +40,7 @@
                 <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToSettings2" prefHeight="139.0" prefWidth="316.0" text="Settings" textFill="#909090" textOverrun="WORD_ELLIPSIS">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#goToSettings2" prefHeight="139.0" prefWidth="316.0" text="Settings" textFill="#909090" textOverrun="WORD_ELLIPSIS" >
                     <graphic>
                         <ImageView fitHeight="54.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                             <image>

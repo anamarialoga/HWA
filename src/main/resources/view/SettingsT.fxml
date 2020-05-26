@@ -20,7 +20,7 @@
                         <Font name="Britannic Bold" size="48.0" />
                     </font>
                 </Label>
-                <Button layoutX="40.0" layoutY="31.0" mnemonicParsing="false" onAction="#goBackk" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #709090; -fx-background-radius: 90;" text="     Back" textFill="#000000db" />
+                <Button layoutX="40.0" layoutY="31.0" mnemonicParsing="false" onAction="#goBackk" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #709090; -fx-background-radius: 90;-fx-effect: dropshadow( gaussian , rgba(10,10,10,10.9) , 10,0,7,10 )" text="     Back" textFill="#000000db" />
                 <ImageView fitHeight="16.0" fitWidth="17.0" layoutX="50.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@undo.png" />

@@ -1,99 +1,65 @@
 package model;
 
-
+import java.time.LocalDate;
+import java.time.Period;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
 
 public class Exercise {
 
-    private SimpleStringProperty m;
-    private SimpleStringProperty t;
-    private SimpleStringProperty w;
-    private SimpleStringProperty th;
-    private SimpleStringProperty f;
-    private SimpleStringProperty s;
-    private SimpleStringProperty su;
 
-    public Exercise()
-    {/*
-        this.m=new SimpleStringProperty("");
-        this.t=new SimpleStringProperty("");
-        this.w=new SimpleStringProperty("");
-        this.th=new SimpleStringProperty("");
-        this.f=new SimpleStringProperty("");
-        this.s=new SimpleStringProperty("");
-        this.su=new SimpleStringProperty("");*/
+    private SimpleStringProperty monday,tuesday, wednesday, thursday, friday, saturday, sunday;
+
+
+
+    
+    public Exercise(String monday, String tuesday, String wednesday, String thursday, String friday, String saturday, String sunday) {
+        this.monday=new SimpleStringProperty(monday);
+        this.tuesday = new SimpleStringProperty(tuesday);
+        this.wednesday = new SimpleStringProperty(wednesday);
+        this.thursday=new SimpleStringProperty(thursday);
+        this.friday=new SimpleStringProperty(friday);
+        this.saturday=new SimpleStringProperty(saturday);
+        this.sunday=new SimpleStringProperty(sunday);
     }
 
-    public Exercise(String m, String t, String w, String th, String f, String s, String su)
-    {
-        this.m=new SimpleStringProperty(m);
-        this.t=new SimpleStringProperty(t);
-        this.w=new SimpleStringProperty(w);
-        this.th=new SimpleStringProperty(th);
-        this.f=new SimpleStringProperty(f);
-        this.s=new SimpleStringProperty(s);
-        this.su=new SimpleStringProperty(su);
 
+    public String getMonday() { return monday.get(); }
+    public void setMonday(String monday) { this.monday= new SimpleStringProperty(monday); }
+
+
+    public String getThursday() { return thursday.get(); }
+    public void setThursday(String thursday) { this.thursday=new SimpleStringProperty(thursday); }
+
+
+    public String getFriday() { return friday.get(); }
+    public void setFriday(String friday) { this.friday= new SimpleStringProperty(friday); }
+
+
+    public String getSaturday() { return saturday.get(); }
+    public void setSaturday(String saturday) { this.saturday=new SimpleStringProperty(saturday); }
+
+
+    public String getSunday() { return sunday.get(); }
+    public void setSunday(String sunday) { this.sunday= new SimpleStringProperty(sunday); }
+
+
+    public String getFirstName() { return tuesday.get(); }
+    public void setFirstName(String firstName) {
+        this.tuesday = new SimpleStringProperty(firstName);
     }
 
-    public String getm() {
-        return m.get();
+
+    public String getLastName() { return wednesday.get(); }
+    public void setLastName(String lastName) {
+        this.wednesday = new SimpleStringProperty(lastName);
     }
 
-    public void setm(String m) {
-        this.m = new SimpleStringProperty(m);
-    }
 
-    public String gett() {
-        return t.get();
-    }
 
-    public void sett(String t) {
-        this.t =new SimpleStringProperty(t);
-    }
-
-    public String getw() {
-        return w.get();
-    }
-
-    public void setw(String w) {
-        this.w = new SimpleStringProperty(w);
-    }
-
-    public String getth() {
-        return th.get();
-    }
-
-    public void setth(String th) {
-        this.th = new SimpleStringProperty(th);
-    }
-
-    public String getf() {
-        return f.get();
-    }
-
-    public void setf(String f) {
-        this.f = new SimpleStringProperty(f);
-    }
-
-    public String gets() {
-        return s.get();
-    }
-
-    public void sets(String s) {
-        this.s = new SimpleStringProperty(s);
-    }
-
-    public String getsu() {
-        return su.get();
-    }
-
-    public void setsu(String su) {
-        this.su = new SimpleStringProperty(su);
-    }
 
     public String toString()
     {
-        return String.format("%s %s %s %s %s %s %s", m, t,w, th, f, s, su);
+        return String.format("%s %s %s %s %s %s %s",monday, tuesday, wednesday, thursday, friday, saturday, sunday);
     }
 }
