@@ -31,11 +31,11 @@
             <Font size="13.0" />
          </font>
       </PasswordField>
+        <Button layoutX="158.0" layoutY="373.0" mnemonicParsing="false" onAction="#loginCustomer" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #708090; -fx-background-radius: 90;" text="Login " />
+        <Button layoutX="158.0" layoutY="516.0" mnemonicParsing="false" onAction="#goToReg" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #708090; -fx-background-radius: 90;" text="Register" />
         <AnchorPane layoutX="122.0" layoutY="143.0" prefHeight="4.0" prefWidth="274.0" style="-fx-background-color: #708090;" />
         <AnchorPane layoutX="152.0" layoutY="267.0" prefHeight="4.0" prefWidth="239.0" style="-fx-background-color: #708090;" />
         <AnchorPane layoutX="152.0" layoutY="341.0" prefHeight="4.0" prefWidth="239.0" style="-fx-background-color: #708090;" />
-        <Button layoutX="158.0" layoutY="373.0" mnemonicParsing="false" onAction="#loginCustomer" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #708090; -fx-background-radius: 90;" text="Login " />
-        <Button layoutX="158.0" layoutY="516.0" mnemonicParsing="false" onAction="#goToReg" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #708090; -fx-background-radius: 90;" text="Register" />
         <Label layoutX="158.0" layoutY="485.0" prefHeight="21.0" prefWidth="260.0" text="Not having an account yet? Click here." textFill="#797373" />
         <Button layoutX="158.0" layoutY="428.0" mnemonicParsing="false" onAction="#loginTrainer" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #708090; -fx-background-radius: 90;" text="Login Trainer " />
         <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="110.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">

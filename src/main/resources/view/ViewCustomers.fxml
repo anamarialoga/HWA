@@ -16,11 +16,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="814.0" style="-fx-background-color: #708090;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerPremiumAccepted">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="814.0" style="-fx-background-color: #708090;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerViewCustomers">
     <children>
         <Pane layoutX="-1.0" prefHeight="125.0" prefWidth="814.0" style="-fx-background-color: #708090;">
             <children>
-                <Label layoutX="194.0" layoutY="39.0" prefHeight="75.0" prefWidth="430.0" text="Premium Accepted" textFill="#30424d">
+                <Label layoutX="194.0" layoutY="39.0" prefHeight="75.0" prefWidth="437.0" text="View Customers list" textFill="#30424d">
                     <font>
                         <Font name="Britannic Bold" size="48.0" />
                     </font>
@@ -32,18 +32,12 @@
                     </image>
                 </ImageView>
             </children></Pane>
-      <TextField fx:id="Message" layoutX="512.0" layoutY="185.0" prefHeight="100.0" prefWidth="295.0" />
-      <Button layoutX="235.0" layoutY="185.0" mnemonicParsing="false" onAction="#show" text="Show" />
-      <Label layoutX="7.0" layoutY="183.0" text="See available trainers:">
+        <Button layoutX="340.0" layoutY="182.0" mnemonicParsing="false" onAction="#send" prefHeight="43.0" prefWidth="88.0" style="-fx-background-color: #709090; -fx-background-radius: 90;" text="Update" />
+      <Text fx:id="show" layoutX="327.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="463.6708984375" />
+      <Label layoutX="37.0" layoutY="188.0" prefHeight="31.0" prefWidth="303.0" text="See your subscribed customers:">
          <font>
-            <Font size="24.0" />
+            <Font size="21.0" />
          </font>
       </Label>
-      <Text fx:id="listTrainers" layoutX="21.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.6708984375" />
-      <Label layoutX="427.0" layoutY="190.0" text="Ask trainer" />
-      <Button layoutX="619.0" layoutY="295.0" mnemonicParsing="false" onAction="#sendTrainer" text="Send" />
-      <Text fx:id="messageSent" layoutX="574.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="238.6708984375" />
-      <Button layoutX="156.0" layoutY="412.0" mnemonicParsing="false" onAction="#checkNewMessage" text="Check Messages" />
-      <Text fx:id="checkMessages" layoutX="301.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="358.6708984375" />
     </children>
 </AnchorPane>
