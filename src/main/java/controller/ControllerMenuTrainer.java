@@ -1,5 +1,6 @@
 package controller;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,10 +29,22 @@ public class ControllerMenuTrainer {
 
     }
 
-    public void goToChat(ActionEvent event) {
+    public void goToChat(ActionEvent event) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/ViewChat.fxml"));
+        Scene newwindow=new Scene(root);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(newwindow);
+        window.show();
     }
 
-    public void goToCustomersList(ActionEvent event) {
+    public void goToCustomersList(ActionEvent event) throws IOException {
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/ViewCustomers.fxml"));
+        Scene newwindow=new Scene(root);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(newwindow);
+        window.show();
     }
 
     public void goBackToLogin(ActionEvent event) throws IOException {
