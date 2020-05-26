@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="956.0" style="-fx-background-color: #212121;" stylesheets="@grey_theme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerStrength">
+<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="956.0" style="-fx-background-color: #212121;" stylesheets="@grey_theme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerFatBurn2">
     <children>
         <VBox layoutX="26.0" layoutY="19.0" prefHeight="281.0" prefWidth="909.0" spacing="10.0">
             <children>
-                <Label prefHeight="48.0" prefWidth="189.0" text="7Day Challenge - Strength">
+                <Label prefHeight="20.0" prefWidth="203.0" text="7Day Challenge - Fat Burn" textFill="#709090">
                     <font>
-                        <Font name="System Bold Italic" size="18.0" />
+                        <Font name="Britannic Bold" size="24.0" />
                     </font>
                 </Label>
                 <TableView fx:id="tableView" prefHeight="250.0" prefWidth="551.0">

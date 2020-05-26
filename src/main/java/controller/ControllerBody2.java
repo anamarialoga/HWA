@@ -22,7 +22,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ControllerStrength implements Initializable {
+public class ControllerBody2 implements Initializable {
 
     @FXML
     private TableView<Exercise> tableView;
@@ -44,35 +44,33 @@ public class ControllerStrength implements Initializable {
     @FXML private TextField field6;
     @FXML private TextField field7;
 
-
-    public void goBackk(ActionEvent event) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/Workout.fxml"));
-        Scene newwindow=new Scene(root);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-
-        window.setScene(newwindow);
-        window.show();
-    }
-
     public void newExercise(ActionEvent event) {
         Exercise newExercise = new Exercise(field1.getText(), field2.getText(), field3.getText(), field4.getText(), field5.getText(), field6.getText(), field7.getText() );
         tableView.getItems().add(newExercise);
     }
 
     public void deleteExercise(ActionEvent event) {
-        ObservableList<Exercise> selectedRows, allPeople;
-        allPeople = tableView.getItems();
+        ObservableList<Exercise> selectedRows, allEx;
+        allEx = tableView.getItems();
 
         selectedRows = tableView.getSelectionModel().getSelectedItems();
         for (Exercise exercise : selectedRows)
         {
-            allPeople.remove(exercise);
+            allEx.remove(exercise);
         }
+    }
+
+    public void goBackk(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/WorkoutT.fxml"));
+        Scene newwindow = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(newwindow);
+        window.show();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         Column1.setCellValueFactory(new PropertyValueFactory<>("monday"));
         Column2.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         Column3.setCellValueFactory(new PropertyValueFactory<>("lastName"));
@@ -93,17 +91,18 @@ public class ControllerStrength implements Initializable {
         Column7.setCellFactory(TextFieldTableCell.<Exercise>forTableColumn());
 
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
     }
 
     public ObservableList<Exercise>  getEx()
     {
         ObservableList<Exercise> data = FXCollections.observableArrayList();
 
-        data.add(new Exercise("Plank",     "Break", "Decline Push-up", "Break", "Pull-Ups", "Break", "Muscle Up"));
-        data.add(new Exercise("Roussian Twist", "",      "Side-Plank", "", "UpAndDown Plank", "", "Box Jumps"));
-        data.add(new Exercise("Push-Ups",       "",      "Boat Hold", "", "Wall Sit", "", "Side-Plank"));
-        data.add(new Exercise("Box Jumps",       "",      "UpAndDown Plank", "", "Roussian Twist", "", "Butterflies"));
-        data.add(new Exercise("Wall Sit",       "",      "BUtterflies", "", "Muscle Up", "", "Push-ups"));
+        data.add(new Exercise("Dumbbell Flyes",     "Break", "Lying Leg Raises", "Break", "Push-Ups", "Break", "Dumbbell Bench Press"));
+        data.add(new Exercise("Dumbbell Bench Press", "",      "Bicycles Crunches", "", "Lying Triceps Extensions", "", "Dumbbell Flyes"));
+        data.add(new Exercise("Bent Over Laterals",       "",      "Squats", "", "One Legged Dumbbell Raises", "", "Squats"));
+        data.add(new Exercise("Hammer Curls",       "",      "Dumbbell Bench Press", "", "One Arm Rows", "", "Bent Over Lateerals"));
+        data.add(new Exercise("Stiff Legged Deadlifts",       "",      "Concentration Curls", "", "Knees-In", "", "Dumbbell Leg Curl"));
 
         return data;
     }

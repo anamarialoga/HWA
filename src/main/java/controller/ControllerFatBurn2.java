@@ -1,5 +1,9 @@
 package controller;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -18,14 +23,10 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import model.Exercise;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+public class ControllerFatBurn2 implements Initializable {
 
-public class ControllerStrength implements Initializable {
 
-    @FXML
-    private TableView<Exercise> tableView;
+    @FXML private TableView<Exercise> tableView;
 
     @FXML private TableColumn<Exercise, String> Column1;
     @FXML private TableColumn<Exercise, String> Column2;
@@ -45,33 +46,9 @@ public class ControllerStrength implements Initializable {
     @FXML private TextField field7;
 
 
-    public void goBackk(ActionEvent event) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/Workout.fxml"));
-        Scene newwindow=new Scene(root);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-
-        window.setScene(newwindow);
-        window.show();
-    }
-
-    public void newExercise(ActionEvent event) {
-        Exercise newExercise = new Exercise(field1.getText(), field2.getText(), field3.getText(), field4.getText(), field5.getText(), field6.getText(), field7.getText() );
-        tableView.getItems().add(newExercise);
-    }
-
-    public void deleteExercise(ActionEvent event) {
-        ObservableList<Exercise> selectedRows, allPeople;
-        allPeople = tableView.getItems();
-
-        selectedRows = tableView.getSelectionModel().getSelectedItems();
-        for (Exercise exercise : selectedRows)
-        {
-            allPeople.remove(exercise);
-        }
-    }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL url, ResourceBundle rb) {
 
         Column1.setCellValueFactory(new PropertyValueFactory<>("monday"));
         Column2.setCellValueFactory(new PropertyValueFactory<>("firstName"));
@@ -95,16 +72,43 @@ public class ControllerStrength implements Initializable {
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
+    public void deleteExercise()
+    {
+        ObservableList<Exercise> selectedRows, allEx;
+        allEx = tableView.getItems();
+
+        selectedRows = tableView.getSelectionModel().getSelectedItems();
+        for (Exercise exercise : selectedRows)
+        {
+            allEx.remove(exercise);
+        }
+    }
+
+    public void newExercise()
+    {
+        Exercise newExercise = new Exercise(field1.getText(), field2.getText(), field3.getText(), field4.getText(), field5.getText(), field6.getText(), field7.getText() );
+        tableView.getItems().add(newExercise);
+    }
+
     public ObservableList<Exercise>  getEx()
     {
         ObservableList<Exercise> data = FXCollections.observableArrayList();
 
-        data.add(new Exercise("Plank",     "Break", "Decline Push-up", "Break", "Pull-Ups", "Break", "Muscle Up"));
-        data.add(new Exercise("Roussian Twist", "",      "Side-Plank", "", "UpAndDown Plank", "", "Box Jumps"));
-        data.add(new Exercise("Push-Ups",       "",      "Boat Hold", "", "Wall Sit", "", "Side-Plank"));
-        data.add(new Exercise("Box Jumps",       "",      "UpAndDown Plank", "", "Roussian Twist", "", "Butterflies"));
-        data.add(new Exercise("Wall Sit",       "",      "BUtterflies", "", "Muscle Up", "", "Push-ups"));
+        data.add(new Exercise("Burpees",     "Break", "High Knee", "Break", "Butt Kicks", "Break", "Mountain CLimbers"));
+        data.add(new Exercise("Jumping Jacks", "",      "Burpees", "", "Jumping Jacks", "", "SpiderMan Plank"));
+        data.add(new Exercise("Butt Kicks",       "",      "Jogging", "", "Bicycles", "", "High Knee"));
+        data.add(new Exercise("Jogging",       "",      "Bicycles", "", "High Knee", "", "Abs"));
+        data.add(new Exercise("Abs",       "",      "Jumping Jacks", "", "SpiderMan Plank", "", "Burpees"));
 
         return data;
+    }
+
+    public void goBackk(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/WorkoutT.fxml"));
+        Scene newwindow = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(newwindow);
+        window.show();
     }
 }
