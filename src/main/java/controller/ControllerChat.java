@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import exceptions.BlankSpace;
 import exceptions.NoUsernameGiven;
-import exceptions.UsernameUsed;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,68 +19,37 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Message;
 import model.PremiumName;
-import model.Trainer;
 import service.MessageService;
-import service.PremiumNameSave;
 
+import java.awt.*;
 import java.io.*;
 import java.util.List;
 
-public class ControllerPremiumAccepted {
-    @FXML
-    public Text listTrainers;
-    @FXML
-    public Text messageSent,checkMessages;
+public class ControllerChat {
+
     @FXML
     public TextField Message;
-
-    public String aux;
+    @FXML
+    public Text messageSent,checkMessages;
 
     public void goBackk(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/customerMenu.fxml"));
-        Scene root2 = new Scene(root);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(root2);
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/trainerMenu.fxml"));
+        Scene newwindow=new Scene(root);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(newwindow);
         window.show();
     }
 
-    public void show(ActionEvent event) throws IOException{
+    public int value2=0;
 
-        try {
-            String aux="";
-            ObjectMapper mapper = new ObjectMapper();
-            InputStream inputStream = new FileInputStream(new File("../HWA/src/main/resources/datastorage/trainers.json"));
-            TypeReference<List<Trainer>> typeReference = new TypeReference<List<Trainer>>() {};
-            List<Trainer> names = mapper.readValue(inputStream,typeReference);
-            for(Trainer n : names){
-                System.out.println("name " + n.getUsername());
-                aux=aux+n.getUsername();
-                aux=aux+"\n";
-            }
-            listTrainers.setText("" + aux);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (JsonParseException e) {
-            e.printStackTrace();
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-    }
-
-    public int value=0;
-
-    public void sendTrainer(ActionEvent event) throws IOException{
+    public void sendCustomer(ActionEvent event)  {
         try{
-
                 MessageService.addMessage(Message.getText());
                 messageSent.setText("Delivered");
-                value=1;
-
+                value2=1;
         } catch ( BlankSpace e) {
+
             Alert alert=new Alert(Alert.AlertType.WARNING, e.getMessage(), ButtonType.OK);
             alert.showAndWait();
             if(alert.getResult()==ButtonType.OK)
@@ -91,11 +59,11 @@ public class ControllerPremiumAccepted {
 
     public void checkNewMessage(ActionEvent event) {
         try {
-            if(value !=1) {
+            if(value2!=1) {
                 String aux = "";
                 ObjectMapper mapper = new ObjectMapper();
                 InputStream inputStream = new FileInputStream(new File("../HWA/src/main/resources/datastorage/chat.json"));
-                TypeReference<java.util.List<model.Message>> typeReference = new TypeReference<java.util.List<Message>>() {
+                TypeReference<java.util.List<Message>> typeReference = new TypeReference<java.util.List<Message>>() {
                 };
                 List<Message> names = mapper.readValue(inputStream, typeReference);
                 for (Message n : names) {
@@ -103,9 +71,9 @@ public class ControllerPremiumAccepted {
                 }
             }else
             {
-                Alert alert=new Alert(Alert.AlertType.WARNING, "Wait for response!", ButtonType.OK);
+                Alert alert= new Alert(Alert.AlertType.WARNING, "Wait for the response!", ButtonType.OK);
                 alert.showAndWait();
-                if(alert.getResult()==ButtonType.OK)
+                if(alert.getResult() == ButtonType.OK)
                     alert.close();
             }
 

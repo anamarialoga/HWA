@@ -20,7 +20,7 @@ public class ControllerWorkout2 {
     }
 
     public void goToFatBurning(ActionEvent event) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/Fat2.fxml"));
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/FatBurn.fxml"));
         Scene newwindow=new Scene(root);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 
@@ -33,7 +33,7 @@ public class ControllerWorkout2 {
 
 
     public void goToStrengthBuilding(ActionEvent event) throws IOException{
-        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/Strength2.fxml"));
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/Strength.fxml"));
         Scene newwindow=new Scene(root);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 
@@ -43,7 +43,7 @@ public class ControllerWorkout2 {
     }
 
     public void goToBodyBuilding(ActionEvent event) throws IOException{
-        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/Body2.fxml"));
+        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/BodyBuilding.fxml"));
         Scene newwindow=new Scene(root);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 

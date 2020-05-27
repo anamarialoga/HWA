@@ -9,10 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
@@ -20,6 +17,7 @@ import model.Exercise;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ControllerStrength implements Initializable {
@@ -44,35 +42,75 @@ public class ControllerStrength implements Initializable {
     @FXML private TextField field6;
     @FXML private TextField field7;
 
-
-    public void goBackk(ActionEvent event) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("view/Workout.fxml"));
-        Scene newwindow=new Scene(root);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-
-        window.setScene(newwindow);
-        window.show();
-    }
+    static ArrayList<String> f1 = new ArrayList<>();
+    static ArrayList<String> f2 = new ArrayList<>();
+    static ArrayList<String> f3 = new ArrayList<>();
+    static ArrayList<String> f4 = new ArrayList<>();
+    static ArrayList<String> f5 = new ArrayList<>();
+    static ArrayList<String> f6 = new ArrayList<>();
+    static ArrayList<String> f7 = new ArrayList<>();
+    public int aux2=0;
 
     public void newExercise(ActionEvent event) {
-        Exercise newExercise = new Exercise(field1.getText(), field2.getText(), field3.getText(), field4.getText(), field5.getText(), field6.getText(), field7.getText() );
-        tableView.getItems().add(newExercise);
+        if(Controller.ok==0) {
+            Exercise newExercise = new Exercise(field1.getText(), field2.getText(), field3.getText(), field4.getText(), field5.getText(), field6.getText(), field7.getText());
+            tableView.getItems().add(newExercise);
+            f1.add(field1.getText());
+            f2.add(field2.getText());
+            f3.add(field3.getText());
+            f4.add(field4.getText());
+            f5.add(field5.getText());
+            f6.add(field6.getText());
+            f7.add(field7.getText());
+            aux2=1;
+            ControllerMenuTrainer.ct2=aux2;
+        }else{
+            Alert alert=new Alert(Alert.AlertType.WARNING, "You're not allowed to make changes!", ButtonType.OK);
+            alert.showAndWait();
+            if(alert.getResult()==ButtonType.OK)
+                alert.close();
+        }
     }
 
     public void deleteExercise(ActionEvent event) {
-        ObservableList<Exercise> selectedRows, allPeople;
-        allPeople = tableView.getItems();
+        if(Controller.ok ==0) {
+            ObservableList<Exercise> selectedRows, allEx;
+            allEx = tableView.getItems();
 
-        selectedRows = tableView.getSelectionModel().getSelectedItems();
-        for (Exercise exercise : selectedRows)
+            selectedRows = tableView.getSelectionModel().getSelectedItems();
+            for (Exercise exercise : selectedRows) {
+                allEx.remove(exercise);
+            }
+        }else{
+            Alert alert=new Alert(Alert.AlertType.WARNING, "You're not allowed to make changes!", ButtonType.OK);
+            alert.showAndWait();
+            if(alert.getResult()==ButtonType.OK)
+                alert.close();
+        }
+    }
+
+    public void goBackk(ActionEvent event) throws IOException {
+        if(Controller.ok == 1) {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/Workout.fxml"));
+            Scene newwindow = new Scene(root);
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            window.setScene(newwindow);
+            window.show();
+        }
+        else
         {
-            allPeople.remove(exercise);
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/WorkoutT.fxml"));
+            Scene newwindow = new Scene(root);
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            window.setScene(newwindow);
+            window.show();
         }
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         Column1.setCellValueFactory(new PropertyValueFactory<>("monday"));
         Column2.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         Column3.setCellValueFactory(new PropertyValueFactory<>("lastName"));
@@ -93,10 +131,10 @@ public class ControllerStrength implements Initializable {
         Column7.setCellFactory(TextFieldTableCell.<Exercise>forTableColumn());
 
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
     }
 
-    public ObservableList<Exercise>  getEx()
-    {
+    public ObservableList<Exercise>  getEx() {
         ObservableList<Exercise> data = FXCollections.observableArrayList();
 
         data.add(new Exercise("Plank",     "Break", "Decline Push-up", "Break", "Pull-Ups", "Break", "Muscle Up"));
@@ -104,7 +142,12 @@ public class ControllerStrength implements Initializable {
         data.add(new Exercise("Push-Ups",       "",      "Boat Hold", "", "Wall Sit", "", "Side-Plank"));
         data.add(new Exercise("Box Jumps",       "",      "UpAndDown Plank", "", "Roussian Twist", "", "Butterflies"));
         data.add(new Exercise("Wall Sit",       "",      "BUtterflies", "", "Muscle Up", "", "Push-ups"));
-
+        System.out.println(ControllerMenuTrainer.ct2);
+        if(ControllerMenuTrainer.ct2==1){
+            for(int i=0;i<f1.size();i++){
+                data.add(new Exercise(f1.get(i),f2.get(i),f3.get(i),f4.get(i),f5.get(i),f6.get(i),f6.get(i)));
+            }
+        }
         return data;
     }
 }

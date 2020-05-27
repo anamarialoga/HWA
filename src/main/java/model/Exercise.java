@@ -27,6 +27,11 @@ public class Exercise {
     public String getMonday() { return monday.get(); }
     public void setMonday(String monday) { this.monday= new SimpleStringProperty(monday); }
 
+    public String getFirstName() { return tuesday.get(); }
+    public void setFirstName(String tuesday) { this.tuesday=new SimpleStringProperty(tuesday); }
+
+    public String getLastName() { return wednesday.get(); }
+    public void setLastName(String wednesday) { this.wednesday=new SimpleStringProperty(wednesday); }
 
     public String getThursday() { return thursday.get(); }
     public void setThursday(String thursday) { this.thursday=new SimpleStringProperty(thursday); }
@@ -42,20 +47,6 @@ public class Exercise {
 
     public String getSunday() { return sunday.get(); }
     public void setSunday(String sunday) { this.sunday= new SimpleStringProperty(sunday); }
-
-
-    public String getFirstName() { return tuesday.get(); }
-    public void setFirstName(String firstName) {
-        this.tuesday = new SimpleStringProperty(firstName);
-    }
-
-
-    public String getLastName() { return wednesday.get(); }
-    public void setLastName(String lastName) {
-        this.wednesday = new SimpleStringProperty(lastName);
-    }
-
-
 
 
     public String toString()

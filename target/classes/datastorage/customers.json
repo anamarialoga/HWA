@@ -1,16 +1,16 @@
 [ {
-  "username" : "alb",
-  "password" : "alb"
-}, {
   "username" : "customer1",
-  "password" : "1111"
+  "password" : "ccc"
 }, {
-  "username" : "custom1",
-  "password" : "111"
+  "username" : "customer2",
+  "password" : "ccc"
 }, {
-  "username" : "dani",
-  "password" : "dani"
+  "username" : "customer3",
+  "password" : "ccc"
 }, {
-  "username" : "aaa",
-  "password" : "aaa"
+  "username" : "trainer4",
+  "password" : "ttt"
+}, {
+  "username" : "customer4",
+  "password" : "ccc"
 } ]

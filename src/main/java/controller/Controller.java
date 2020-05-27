@@ -33,10 +33,15 @@ public class Controller {
         window.setScene(root2);
         window.show();
     }
+
+    public static int ok=0;
+
     @FXML
     public void loginCustomer(ActionEvent event) throws IOException {
         try {
             CustomerLogin.checkCustomer(usernameField.getText(), passwordField.getText());
+            ok=1;
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Logged in successfuly!", ButtonType.OK);
             alert.showAndWait();
             if (alert.getResult() == ButtonType.OK)
@@ -60,6 +65,7 @@ public class Controller {
     @FXML
     public void loginTrainer(ActionEvent event) throws IOException{
         try {
+            ok=0;
             TrainerLogin.checkTrainer(usernameField.getText(), passwordField.getText());
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Logged in successfuly!", ButtonType.OK);
             alert.showAndWait();
